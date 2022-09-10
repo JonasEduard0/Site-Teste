@@ -17,17 +17,29 @@
 
 <!--bgcolor="black" text="white" link="red". Não é mais utilizado-->
 <!--É possivel alterar cor.letras,etc de cada tag separadamente dentro delas-->
-<body style="background-color: black;"> <!--CSS Inline-->
+<body style="background-image: linear-gradient(to right, black, rgb(20, 12, 12), rgb(27, 6, 6));"> <!--CSS Inline-->
     
-    <center><h1>Título site</h1><h6>Título pequeno do site</h6></center>
+    <h1 style="text-align:center">Título site</h1><h6 style="text-align:center;">Título pequeno do site</h6>
     <hr>
-    <p><font color="yellow">Conteúdo</font><font size="30px"><br>entre p</font></p>
+    
+    <p style="color: yellow;">Conteúdo <br>entre p</p>
        <!--entre <font></font> pode expecificar a cor ou tamanho apenas dos caracteres dentro-->
     <hr>
-    
+
+    <!--ID e Classe-->
+    <style>
+        .verde{color: rgba(0, 128, 0, 0.658);}
+        #vermelho{color: red;}
+    </style>
+    <p class="verde">Classe com .</p>
+    <p id="vermelho">ID com #</p>
+    <hr>
+
+    <main>
         <!-- Símbolos -->
-    <p>Símbolos: &reg; , &copy; , &trade;</p>
+    <p id="simbolo">Símbolos: &reg; , &copy; , &trade;</p>
     <p>Emojis: &#x1F596;</p>
+    </main>
     <hr>
 
         <!-- Formatando texto -->
@@ -45,13 +57,16 @@
     <blockquote>Citação</blockquote>
     <hr>
 
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum praesentium quibusdam earum soluta commodi in vero distinctio quas, odio aliquam, officia fugiat mollitia quisquam rerum iure, hic laudantium? Delectus.
+    <hr>
+    
     <marquee behavior="" direction="right">Tags vermelhas significam que podem parar de funcionar em atualizações futuras da linguagem</marquee>
     <hr>
 
     <mark style="background-color: rgb(39, 134, 39);">Texto marcado</mark>
     <hr>
     
-    <code>Texto monoespaçado</code>
+    <code class="mono">Texto monoespaçado</code>
     <hr>
 
     <pre>Todo texto escrito aqui fica
@@ -144,7 +159,7 @@ Seu navegador não suporta video</video></p> <!--será exibido caso nenhum funci
     <hr>
 
         <!-- Tabelas -->
-<table border="1px" align="center" bgcolor="blue" lenght="200dp">
+<table style="background-color:blue;" border="2px" align="center" lenght="200dp">
 	<tr><td><b>Estado</b></td><td><b>Sigla</b></td></tr>
 	<tr><td>Minas Gerais</td><td>MG</td></tr>
 	<tr><td>Espirito Santo</td><td>ES</td></tr>
