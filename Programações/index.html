@@ -182,5 +182,34 @@ Seu navegador não suporta video</video></p> <!--será exibido caso nenhum funci
     <p><input type="submit" value="Enviar"></p>
 </form>
 <hr>
+
+        <!-- Box -->
+<!-- Elementos de bloco no HTML podem ser vistos como uma caixa contendo conteúdo -->
+<div class="pai">
+    <div class="filho">
+    <div class="caixa">
+    <p>Teste</p>
+</div>    
+</div>
+</div>
+    <style>
+        .pai{background-color: #af47ff;padding: 30px;width: 300px;}
+        .filho{background-color: #ff4797;padding: 30px;}
+        .caixa{background-color: #f3ff47;padding: 30px;border: 2px solid #333;border-style: dotted;font-family: courier;text-align:center;font-size:2rem;}
+</style>
+
+    <!-- Flexbox -->    
+<body>
+    <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    </div>
+    </body>
+<style>
+    .flex-container {display:flex;justify-content:center;background-color: DodgerBlue;color: black;}
+    .flex-container > div {background-color: #f1f1f1;margin: 10px;padding: 20px;font-size: 30px;width: 20vw;}
+</style>
+<hr>
 </body>
 </html>
