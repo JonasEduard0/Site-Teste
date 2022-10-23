@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favcon -->
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+        <!--CSS interno-->
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen">
+
+    <title>Título barra</title>
+</head>
+
+<!--bgcolor="black" text="white" link="red". Não é mais utilizado-->
+<!--É possivel alterar cor.letras,etc de cada tag separadamente dentro delas-->
+<body style="background-image: linear-gradient(to right, black, rgb(20, 12, 12), rgb(27, 6, 6));"> <!--CSS Inline-->
+    
+    <h1 style="text-align:center">Título site</h1><h6 style="text-align:center;">Título pequeno do site</h6>
+    <hr>
+    
+    <p style="color: yellow;">Conteúdo <br>entre p</p>
+       <!--entre <font></font> pode expecificar a cor ou tamanho apenas dos caracteres dentro-->
+    <hr>
+
+    <!--ID e Classe-->
+    <style>
+        .verde{color: rgba(0, 128, 0, 0.658);}
+        #vermelho{color: red;}
+    </style>
+    <p class="verde">Classe com .</p>
+    <p id="vermelho">ID com #</p>
+    <hr>
+
+    <main>
+        <!-- Símbolos -->
+    <p id="simbolo">Símbolos: &reg; , &copy; , &trade;</p>
+    <p>Emojis: &#x1F596;</p>
+    </main>
+    <hr>
+
+        <!-- Formatando texto -->
+    <b>Negrito</b>
+    <i>Itálico</i>
+    <u>Sublinhado</u>
+
+    <big>Letra grande</big>
+    <small>Letra pequena</small>
+    <tt>Fonte máquina de escrever</tt>
+
+    1<sup style="background-color: red;">o</sup>
+    1<sub>o</sub>
+
+    <blockquote>Citação</blockquote>
+    <hr>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum praesentium quibusdam earum soluta commodi in vero distinctio quas, odio aliquam, officia fugiat mollitia quisquam rerum iure, hic laudantium? Delectus.
+    <hr>
+    
+    <marquee behavior="" direction="right">Tags vermelhas significam que podem parar de funcionar em atualizações futuras da linguagem</marquee>
+    <hr>
+
+    <mark style="background-color: rgb(39, 134, 39);">Texto marcado</mark>
+    <hr>
+    
+    <code class="mono">Texto monoespaçado</code>
+    <hr>
+
+    <pre>Todo texto escrito aqui fica
+                                        da forma que
+                foi escrito no código
+    </pre>
+    <hr>
+
+    <abbr title="Hyper Text Markup Language">HTML</abbr>
+    <hr>
+
+    <bdo dir="rtl">Texto ao contrário</bdo>
+    <hr>
+
+        <!-- Imagens -->
+    <img src="fullmetal.png" alt="Suporta vários formatos.Aqui é um texto de opcional" width="30%" border="5" vspace="20" hspace="20">
+    
+<!--com picture,você pode adaptar a imagem de acordo com tela do seu visitante-->
+    <picture>
+        <source media="(max-width: 750px)" srcset="fullmetal.png" type="image/">
+        <source media="(max-width: 1050px )" srcset="fullmetal.png" type="image/">
+        <img src="fullmetal.png" alt="imagem flexivel">
+    </picture>
+    <hr>
+
+        <!-- Áudio -->
+    <audio controls preload="metadata" loop> <!--configurações do áudio-->
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg"> <!--sempre por vários formatos para caso um não funcionar o outro funcione-->
+    <source src="horse.wav" type="audio/wav">
+Seu navegador não suporta o áudio</audio> <!--será exibido caso nenhum funcione-->
+    <hr>
+
+        <!-- Vídeo -->
+    <p><video controls height="320" width="720" poster="fullmetal.png"> <!--configurações do player-->
+    <source src="video.mp4" type="audio/mp4">
+    <source src="video.m4v" type="audio/mp4">
+    <source src="video.webm" type="audio/webm"> <!--sempre por vários formatos para caso um não funcionar o outro funcione-->
+    <source src="video.ogv" type="audio/ogg">
+Seu navegador não suporta video</video></p> <!--será exibido caso nenhum funcione-->
+    <hr>
+
+        <!-- Listas -->
+<!--ordenadas-->
+<ol type="I">
+    <li>Lista</li>
+    <li>Totalmente</li>
+    <li>Ordenada</li></ol>
+
+<!--não ordenadas-->
+<ul type="square">
+    <li>Lista</li>
+    <li>não</li>
+    <li>ordenada</li>
+</ul>
+
+<!--mistas-->
+<ol type="A">
+    <li>Listas mistas</li>
+    <ol type="a">
+        <li>Python</li>
+        <li>JavaScript</li>
+    </ol>
+    <li>Pior linguagem</li>
+    <ul type="circle">
+        <li>C#</li>
+    </ul>
+</ol>
+
+<!--definição-->
+<dl>
+    <dt>Lista de definição</dt>
+    <dd>Usada para explicar o título</dd>
+    <dt>HTML</dt>
+    <dd>Lingua que estou aprendendo</dd>
+</dl>
+<hr>
+
+        <!-- Links -->
+<!--externos-->
+    <p><a href="https://google.com" target="_blank" rel="external">Texto que envia para o link</a><br>
+    <a href="aplicativo.exe"target="parent">Texto para baixar</a></p>
+<!--internos-->    
+    <a href="file:///E:/Programações/index.html">Link interno</a>
+    <hr>
+
+        <!-- Iframes -->
+    <iframe src="menu.html" frameborder="0" width="20%" height="500" name="lista"></iframe>
+    <iframe src="https://www.intoxianime.com/" width="79%" height="500" frameborder="0" name="principal"></iframe>
+    <hr>
+
+        <!-- Tabelas -->
+<table style="background-color:blue;" border="2px" align="center" lenght="200dp">
+	<tr><td><b>Estado</b></td><td><b>Sigla</b></td></tr>
+	<tr><td>Minas Gerais</td><td>MG</td></tr>
+	<tr><td>Espirito Santo</td><td>ES</td></tr>
+</table>
+<hr>
+
+        <!-- Formulários -->
+<form action="index.html" method="post"> <!--métodos post(mostra no link) e get(esconde).Enviará o resultado para index.html-->
+
+<!--sempre começar com p, depois input,depois o tipo da informação,depois o nome do campo e depois se tem uma expecificação-->
+<!--há muitos tipos de type-->
+
+    <p><input type="text" name="camponome" required size="50px"></p> <!--required size="" dita o tamanho do campo-->
+    <p><input type="text" name="campodesabilitado" disabled></p>     <!--disabled não permite escrever-->
+    <p><input type="password" name="camposenha" maxlength="5"></p>   <!--maxlength="" dita a quantidade de caracteres-->
+    <p><input type="date" name="campodata"></p>
+    <p><input type="email" name="campoemail" required></p>           <!--required obriga a preencher o campo-->
+    <p><input type="file" value="arquivo"></p>                      
+    <p><input type="reset" value="Limpar"></p>                       <!--em file,submit e reset não põe name e põe value-->
+    <p><input type="submit" value="Enviar"></p>
+</form>
+<hr>
+
+        <!-- Box -->
+<!-- Elementos de bloco no HTML podem ser vistos como uma caixa contendo conteúdo -->
+<div class="pai">
+    <div class="filho">
+    <div class="caixa">
+    <p>Teste</p>
+</div>    
+</div>
+</div>
+    <style>
+        .pai{background-color: #af47ff;padding: 30px;width: 300px;}
+        .filho{background-color: #ff4797;padding: 30px;}
+        .caixa{background-color: #f3ff47;padding: 30px;border: 2px solid #333;border-style: dotted;font-family: courier;text-align:center;font-size:2rem;}
+</style>
+
+    <!-- Flexbox -->    
+    <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<style>
+    .flex-container {display:flex;justify-content:center;background-color: DodgerBlue;color: black;}
+    .flex-container > div {background-color: #f1f1f1;margin: 10px;padding: 20px;font-size: 30px;width: 20vw;}
+</style>
+
+    <div class="grid">
+        <div class="box"><p>Conteúdo caixa 1</p></div>
+        <div class="box"><p>Conteúdo caixa 2</p></div>
+        <div class="box"><p>Conteúdo caixa 3</p></div>
+        <div class="box"><p>Conteúdo caixa 4</p></div>
+    </div>
+
+    <style>
+        .grid{display: grid; height: 50vh; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; grid-gap: 10px;}
+        .box{border: 1px solid;}
+    </style><hr>
+
+<div class="wrapper">
+    <header>Header</header>
+    <article>
+    <h1>Welcome</h1>
+    <p>Hi!</p>
+    </article>
+    <aside>
+    <ul>
+    <li>Sidebar</li>
+    </ul>
+    </aside>
+    <footer>Footer</footer>
+   </div>
+   <style>
+header{grid-area: header;background-color: #fed330;padding: 20px;}
+article{grid-area: content;background-color: #20bf6b;padding: 20px;}aside {grid-area: sidebar;background-color: #45aaf2;}
+footer{padding: 20px;grid-area: footer;background-color: #fd9644;}
+.wrapper{display: grid;grid-gap: 20px;grid-template-columns: 1fr 3fr;grid-template-areas:
+    'header header'
+    'sidebar content'
+    'footer footer';}
+</style>
+<hr>
+</body>
+</html>
