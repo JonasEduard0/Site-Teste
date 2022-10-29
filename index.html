@@ -47,7 +47,7 @@
     <i>Itálico</i>
     <u>Sublinhado</u>
 
-    <big>Letra grande</big>
+    <strong>Letra grande</strong>>
     <small>Letra pequena</small>
     <tt>Fonte máquina de escrever</tt>
 
@@ -151,19 +151,40 @@ Seu navegador não suporta video</video></p> <!--será exibido caso nenhum funci
     <a href="aplicativo.exe"target="parent">Texto para baixar</a></p>
 <!--internos-->    
     <a href="file:///E:/Programações/index.html">Link interno</a>
+<style>
+    a{color: red;text-decoration: none;font-weight: bolder;}
+    a:visited{color: blue;text-decoration: dotted;}
+    a:active{text-decoration: underline;}
+</style>
     <hr>
+
 
         <!-- Iframes -->
     <iframe src="menu.html" frameborder="0" width="20%" height="500" name="lista"></iframe>
-    <iframe src="https://www.intoxianime.com/" width="79%" height="500" frameborder="0" name="principal"></iframe>
+    <iframe src="https://www.intoxianime.com/"width="79%" height="500" frameborder="0" name="principal"></iframe>
     <hr>
 
         <!-- Tabelas -->
-<table style="background-color:blue;" border="2px" align="center" lenght="200dp">
-	<tr><td><b>Estado</b></td><td><b>Sigla</b></td></tr>
-	<tr><td>Minas Gerais</td><td>MG</td></tr>
-	<tr><td>Espirito Santo</td><td>ES</td></tr>
-</table>
+    <table>
+        <tr>  <!--table row(linha da tabela)-->
+            <td class="col" rowspan="2">País</td>  <!--table data(dado da tabla)-->
+            <td class="col">Estado</td>
+            <td class="col">Cidade</td>
+        </tr>
+        <tr>
+            <td colspan="2">MG</td>
+        </tr>
+        <tr>
+            <td>EUA</td>
+            <td>Texas</td>
+            <td>New York</td>
+        </tr>
+    </table>
+    <style>
+        table{width: 400px;height: 100px;}
+        td{border: 1px solid blue;text-align: center;background-color: red;}
+        .col{position: sticky;top: 0;background-color: blue;}
+    </style>
 <hr>
 
         <!-- Formulários -->
@@ -182,6 +203,9 @@ Seu navegador não suporta video</video></p> <!--será exibido caso nenhum funci
     <p><input type="submit" value="Enviar"></p>
 </form>
 <hr>
+<style>
+    form{background-image: url(fullmetal.png);background-attachment: fixed;}
+</style>
 
         <!-- Box -->
 <!-- Elementos de bloco no HTML podem ser vistos como uma caixa contendo conteúdo -->
@@ -192,57 +216,49 @@ Seu navegador não suporta video</video></p> <!--será exibido caso nenhum funci
 </div>    
 </div>
 </div>
-    <style>
-        .pai{background-color: #af47ff;padding: 30px;width: 300px;}
-        .filho{background-color: #ff4797;padding: 30px;}
-        .caixa{background-color: #f3ff47;padding: 30px;border: 2px solid #333;border-style: dotted;font-family: courier;text-align:center;font-size:2rem;}
-</style>
-
-    <!-- Flexbox -->    
-    <div class="flex-container">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>
 <style>
-    .flex-container {display:flex;justify-content:center;background-color: DodgerBlue;color: black;}
-    .flex-container > div {background-color: #f1f1f1;margin: 10px;padding: 20px;font-size: 30px;width: 20vw;}
-</style>
-
-    <div class="grid">
-        <div class="box"><p>Conteúdo caixa 1</p></div>
-        <div class="box"><p>Conteúdo caixa 2</p></div>
-        <div class="box"><p>Conteúdo caixa 3</p></div>
-        <div class="box"><p>Conteúdo caixa 4</p></div>
-    </div>
-
-    <style>
-        .grid{display: grid; height: 50vh; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; grid-gap: 10px;}
-        .box{border: 1px solid;}
-    </style><hr>
-
-<div class="wrapper">
-    <header>Header</header>
-    <article>
-    <h1>Welcome</h1>
-    <p>Hi!</p>
-    </article>
-    <aside>
-    <ul>
-    <li>Sidebar</li>
-    </ul>
-    </aside>
-    <footer>Footer</footer>
-   </div>
-   <style>
-header{grid-area: header;background-color: #fed330;padding: 20px;}
-article{grid-area: content;background-color: #20bf6b;padding: 20px;}aside {grid-area: sidebar;background-color: #45aaf2;}
-footer{padding: 20px;grid-area: footer;background-color: #fd9644;}
-.wrapper{display: grid;grid-gap: 20px;grid-template-columns: 1fr 3fr;grid-template-areas:
-    'header header'
-    'sidebar content'
-    'footer footer';}
+    .pai{background-color: #af47ff;padding: 30px;width: 300px;text-shadow: 10px 10px 10px chocolate;}
+    .filho{background-color: #ff4797;padding: 30px;}
+    .caixa{background-color: #f3ff47;padding: 30px;border: 2px solid #333;border-style: dotted;font-family: courier;text-align:center;font-size:2rem;}
 </style>
 <hr>
+
+
+        <!-- Pseudo-classe -->
+<div id="d1"><p>hover faz isso. Pseudo com : </p></div>
+<style> 
+    #d1{background-color: var(--cor1);}
+    #d1:hover > p{background-color: yellow;}  
+</style>
+<hr>
+
+
+        <!-- Tagas de agrupamento / Semânticas -->
+<header>
+    <h1>Cabeçalho</h1>
+    <nav><a href="https://google.com" target="_blank">link para outro página</a></nav>
+</header>
+<main>
+    <section id="assuntos">
+        <p>Assunto</p>
+        <article>
+            <p>Artigo</p>
+            <aside>
+                Parte do artigo q pode não ter muito a ver com a seção
+            </aside>
+        </article>
+    </section>
+</main>
+<footer>
+    <p>Rodapé</p>
+</footer>
+<style>
+    header{box-shadow:10px 10px 10px rgba(250, 250, 250, 0.644);border-radius: 20px 30px; --cor1:red;}
+</style>
+<hr>
+
+
+    
+
 </body>
 </html>
